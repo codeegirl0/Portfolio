@@ -37,7 +37,7 @@ ul{
 /* small devices deseign */
 header{
     height: 100vh;
-    background-image: url(/images/cube.gif);
+    background-image: url(images/cube.gif);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -259,7 +259,7 @@ header #welcome{
     position: absolute;
     width: 100%;
     height: 100%;
-    background-image: url(/images/DailyCube.gif);
+    background-image: url(images/DailyCube.gif);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -290,7 +290,7 @@ footer p{
     }
     #content-view #lg-view{
         display: block;
-        background-image: url(/images/3d_snake.gif);
+        background-image: url(images/3d_snake.gif);
         width: 40%;
         background-repeat: no-repeat;
         background-position: center;
