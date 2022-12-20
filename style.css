@@ -1,0 +1,341 @@
+
+*{
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+/*reset*/
+html, body{
+    overflow-x: hidden !important;
+    width: auto !important;
+}
+body{
+    background-color: black;
+}
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+/* Preloader style*/
+#preloader{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: #000 url(/images/preloader.gif) no-repeat;
+    background-size: 40%;
+    background-position: center;
+    z-index: 100;
+}
+
+/* small devices deseign */
+header{
+    height: 100vh;
+    background-image: url(/images/cube.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+nav{
+    position: fixed;
+    float: left;
+    width: 8%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-between;
+    z-index: 10;
+
+}
+nav #logo{
+    width: 50px;
+    padding-left: 5px;
+}
+#nav-ul{
+    margin-bottom: 150px;
+    display: flex;
+    transform: rotate(90deg);
+}
+#nav-ul li{
+    padding: 3px 10px;
+    color:white;
+    font-family: 'Inconsolata', monospace;
+}
+ul .selected{
+    border-top: 1px solid white;
+}
+header #welcome{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 30vh;
+    text-align: center;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+#welcome h1{
+    font-family: 'Press Start 2P', cursive;
+}
+#welcome h3{
+    font-family: 'Roboto Mono', monospace;
+    line-height: 40px;
+    font-size: 16px;
+}
+#scroll{
+    position: absolute;
+    animation: scrollmove 1.5s infinite;
+}
+#scroll p{
+    font-family: 'Inconsolata', monospace;
+    margin-bottom: 0;
+}
+@keyframes scrollmove{
+    from{
+        bottom: 20px;
+    }
+    to{
+        bottom: 0px;
+    }
+}
+#lg-view{
+    display: none;
+}
+.sections{
+    width: 100%;
+    min-height: 100vh;
+    margin-top: 80px;
+}
+.sections h1{
+    font-size: 3em;
+    font-weight: 300;
+    font-family: 'Rubik Mono One', sans-serif;
+    color:white;
+    transform: translateX(0px);
+    opacity:1;
+    transition: 1s all ease;
+    margin-bottom: 60px;
+    margin-left: 7%;
+}
+.sections .active{
+    transform: translateX(350px);
+    opacity: 0.5;
+}
+
+#about #content-view .content{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 80%;
+    margin: 0 auto;
+}
+.odd, .even{
+    width:50%;
+}
+.even{
+    margin-left:40%;
+}
+.odd{
+    text-align: end;
+}
+.odd .info-text{
+    padding-right:20px;
+    margin-right:10px;
+    border-right:1px solid white;
+}
+.even .info-text{
+    margin-left:13px;
+    padding-left: 20px;
+    border-left:1px solid white;
+}
+.info-text, .info-title{
+    color:white;
+    font-family: 'Roboto Mono', monospace;
+}
+.info-text{
+    line-height: 30px;
+}
+
+.projects{
+    width: 65%;
+    height: 55vh;
+    margin-bottom: 1em;
+    border: 1px solid white;
+    border-radius: 25px;
+    transition: 0.5s box-shadow ;
+}
+.projects:hover{
+    box-shadow: 2px 2px 5px rgba(165, 165, 165, 0.774);
+}
+.projects .view{
+    position: relative;
+    width: 95%;
+    height: 80%;
+    margin: 0 auto;
+    margin-top: 5px;
+}
+.projects .view img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+.projects .links{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+.projects .links a{
+    font-family: 'Inconsolata', monospace;
+    color:white;
+    border-bottom: 2px solid white;
+    padding-bottom: 3px;
+    transition: 0.5s opacity ease;
+}
+.projects .links a:hover{
+    opacity: 0.5;
+}
+#contact{
+    position: relative;
+}
+#contact .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    height: 60%;
+    width: 100%;
+}
+
+#contact .content #hire{
+    width: 90%;
+    text-align: center;
+    color: white;
+}
+#hire h4{
+    font-family: 'Roboto Mono', monospace;
+    margin-bottom: 40px;
+}
+#hire a{
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    padding: 10px 20px;
+    border: 2px solid white;
+    transition: 0.5s all;
+}
+#hire a:hover{
+    box-shadow: 2px 2px 5px rgba(165, 165, 165, 0.774);
+    background-color: white;
+    color: black;
+}
+#contact .content #social-media{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+}
+#social-media i{
+    font-size: 1.5em;
+    color: white;
+    transition: 0.3s opacity ease;
+}
+#social-media i:hover{
+    opacity: 0.5;
+}
+
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/DailyCube.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+footer{
+    text-align: center;
+}
+footer p{
+    color:white;
+    font-family: 'Inconsolata', monospace;
+}
+
+@media only screen and (min-width:720px) {
+    nav{
+        width:6%;
+    }
+    nav #logo{
+        padding-left: 0px;
+    }
+    .sections .active{
+        transform: translateX(600px);
+    }
+    #content-view{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #content-view #lg-view{
+        display: block;
+        background-image: url(/images/3d_snake.gif);
+        width: 40%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+    }
+    .even{
+        margin-left:43%;
+    }
+    .projects{
+        width: 40%;
+    }
+}
+
+@media only screen and (min-width:960px){
+    nav{
+        width:5%;
+    }
+    nav #logo{
+        width: 60px;
+    }
+    .sections .active{
+        transform: translateX(800px);
+    }
+    .even{
+        margin-left:45%;
+    }
+    #contact .content #social-media{
+        width: 30%;
+    }
+    .projects{
+        width: 35%;
+    }
+}
+
+@media only screen and (min-width:1024px){
+    .sections .active{
+        transform: translateX(1000px);
+    }
+    #content-view #lg-view{
+        width: 50%;
+    }
+    .even{
+        margin-left:46%;
+    }
+    .projects{
+        width: 26%;
+    }
+}
